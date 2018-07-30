@@ -1,5 +1,5 @@
 # Docs: https://caddyserver.com/docs/caddyfile
-https://improbabilitydrive.online:443 {
+https://improbabilitydrive.online {
     root /var/www/public
 #    fastcgi / php-fpm:9000 php {
 #        index index.php
@@ -8,9 +8,9 @@ https://improbabilitydrive.online:443 {
     # To handle .html extensions with laravel change ext to
     ext / .html
 
-    rewrite {
-        to {path} {path}/ /index.php?{query}
-    }
+#    rewrite {
+#        to {path} {path}/ /index.php?{query}
+#    }
     gzip
     browse
     log /var/log/caddy/access.log

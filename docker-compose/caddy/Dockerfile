@@ -14,5 +14,5 @@ EXPOSE 80 443 2015
 
 WORKDIR /var/www/public
 
-CMD ["/usr/bin/caddy", "-conf", "/etc/Caddyfile"]
+CMD ["/usr/bin/caddy", "-agree", "-conf", "/etc/Caddyfile"]
  
